@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <nav>
+        <a href="/">Домой</a> |
+        <a href="/cups/">Список кружек</a> |
+        <a href="/about/">О нас</a> |
+        <a href="/contacts/">Контакты</a>
+    </nav>
+
+    <h1>{{ a }}</h1>
+    <h1>{{ e }}</h1>
+    <h1>{{contacts}}</h1>
+    <p> Тел:  23534534534 </p>
+    <p> email: codify@gmail.com </p>
+    
+
+    <h2>Our Team</h2>
+    <p>We are a team of experienced professionalis ready to help you.</p>
+       
+    <div>
+        {% for cup in cup_names %}
+            <div>
+                <a href="/cup/{{ loop.index }}">{{ cup }}</a>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
